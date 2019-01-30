@@ -2,9 +2,9 @@ set nu
 syntax enable
 colorscheme molokai
 set guifont=Consolas\ 12
-¡°====markdownÉèÖÃ==== 
+â€œ====markdownè®¾ç½®==== 
 let g:table_mode_corner="|" 
-¡°====open file in chrome browser==== 
+â€œ====open file in chrome browser==== 
 nnoremap <Leader> ch :update<Bar>silent ! start %:p<CR>
 
 
@@ -24,6 +24,21 @@ set autoindent
 set noundofile
 set nobackup
 set noswapfile
-set nocompatible              " È¥³ıVIÒ»ÖÂĞÔ,±ØĞë
-filetype off                  " ±ØĞë
-filetype plugin indent on    " ±ØĞë ¼ÓÔØvim×Ô´øºÍ²å¼şÏàÓ¦µÄÓï·¨ºÍÎÄ¼şÀàĞÍÏà¹Ø½Å±¾
+set nocompatible              " å»é™¤VIä¸€è‡´æ€§,å¿…é¡»
+filetype off                  " å¿…é¡»
+filetype plugin indent on    " å¿…é¡» åŠ è½½vimè‡ªå¸¦å’Œæ’ä»¶ç›¸åº”çš„è¯­æ³•å’Œæ–‡ä»¶ç±»å‹ç›¸å…³è„šæœ¬
+
+#tmux.conf
+set -g prefix C-x
+unbind C-b
+#up
+bind-key k select-pane -U
+#down
+bind-key j select-pane -D
+#left
+bind-key h select-pane -L
+#right
+bind-key l select-pane -R
+setw -g mode-keys vi
+#terminal screen
+set -g default-terminal "xterm-256color"
