@@ -28,17 +28,3 @@ set nocompatible              " 去除VI一致性,必须
 filetype off                  " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
-#tmux.conf
-set -g prefix C-x
-unbind C-b
-#up
-bind-key k select-pane -U
-#down
-bind-key j select-pane -D
-#left
-bind-key h select-pane -L
-#right
-bind-key l select-pane -R
-setw -g mode-keys vi
-#terminal screen
-set -g default-terminal "xterm-256color"
